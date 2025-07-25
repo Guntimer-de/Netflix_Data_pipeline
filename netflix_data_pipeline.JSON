@@ -1,4 +1,4 @@
-//Modify permissions in policy//
+--Modify permissions in policy
 
 {
 	"Version": "2012-10-17",
@@ -20,7 +20,7 @@
 }
 
 
-// add Trust policy //
+--add Trust policy
 
 {
     "Version": "2012-10-17",
