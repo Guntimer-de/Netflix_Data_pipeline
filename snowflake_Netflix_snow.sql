@@ -1,1 +1,1 @@
-
+--configuration of snowpipe codes coming soon - stay tuned
