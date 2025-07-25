@@ -1,0 +1,42 @@
+//Modify permissions in policy//
+
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowSnowflakeAccessToBucket",
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:PutObject",
+				"s3:ListBucket"
+			],
+			"Resource": [
+				"arn:aws:s3:::netlixproject",
+				"arn:aws:s3:::netlixproject/*"
+			]
+		}
+	]
+}
+
+
+// add Trust policy //
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "SnowflakeAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::911891700720:user/zw441000-s"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals": {
+                    "sts:ExternalId": "VN77571_SFCRole=3_uxzDCDbuDqZwelto9vO2Yjnq0Ds="
+                }
+            }
+        }
+    ]
+}
